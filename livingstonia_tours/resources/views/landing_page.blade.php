@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>TRAVELER - Free Travel Website Template</title>
+    <title>LivingstoniaTours</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -68,7 +68,7 @@
         <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
                 <a href="" class="navbar-brand">
-                    <h1 class="m-0 text-primary"><span class="text-dark">LIVINSTONIA <br> </span>TOURS</h1>
+                    <h1 class="m-0 text-primary"><span class="text-dark">LIVINGSTONIA <br> </span>TOURS</h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -78,11 +78,11 @@
                         <a href="landing_page.blade.php" class="nav-item nav-link active">Home</a>
                         <a href="home.blade.php" class="nav-item nav-link">About</a>
                         <a href="services.blade.php" class="nav-item nav-link">Services</a>
-                        <a href="tour_packages.blade.php" class="nav-item nav-link">Tour Packages</a>
+                        <a href="{{ route('tour-packages.index') }}" class="nav-item nav-link">>Tour Packages</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">
-                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                                <a href="about.blade.php" class="dropdown-item">Blog Grid</a>
                                 <a href="singleblog.blade.php" class="dropdown-item">Blog Detail</a>
                                 <a href="destination.html" class="dropdown-item">Destination</a>
                                 <a href="guide.html" class="dropdown-item">Travel Guides</a>
