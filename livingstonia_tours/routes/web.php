@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CarHireController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('landing_page');
+    });
+
+Route::middleware(['web'])->group(function(){
+    //My routes here
+
+    //car hire routes here
+    Route::get('/carhire', [CarHireController::class, 'carhire'])->name('carhire');
 });

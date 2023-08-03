@@ -5,6 +5,24 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+/* Set the maximum width of the cards and center them in the container */
+.card {
+  width: 15rem;
+  margin: 5px;
+  padding: 10px;
+}
+
+/* Adding some spacing between cards */
+.col-md-4 {
+  padding: 5px;
+}
+
+/* Reduce the spacing between columns (adjacent cards) */
+.row {
+  margin: 5px; /* You can adjust this value as needed */
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
