@@ -77,7 +77,7 @@
                     <div class="navbar-nav ml-auto py-0">
                         <a href="landing_page.blade.php" class="nav-item nav-link active">Home</a>
                         <a href="home.blade.php" class="nav-item nav-link">About</a>
-                        <a href="services.blade.php" class="nav-item nav-link">Services</a>
+                        <a href="{{ route('services') }}" class="nav-item nav-link">Services</a>
                         <a href="{{ route('tour-packages.index') }}" class="nav-item nav-link">>Tour Packages</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
