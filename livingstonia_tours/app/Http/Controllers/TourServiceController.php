@@ -38,7 +38,6 @@ class TourServiceController extends Controller
      */
     public function show(string $id)
     {
-        return view('tour_services.tour_packages');
     }
 
     /**
