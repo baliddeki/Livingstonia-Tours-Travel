@@ -1,7 +1,9 @@
 <?php
 
+use App\Models\CarBooking;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarHireController;
+use App\Http\Controllers\CarBookingController;
 
 
 /*
@@ -24,4 +26,9 @@ Route::middleware(['web'])->group(function(){
 
     //car hire routes here
     Route::get('/carhire', [CarHireController::class, 'carhire'])->name('carhire');
+
+    //Car booking routes here
+    Route::get('/carbooking',[CarBookingController::class, 'carbooking'])->name('carbooking');
+    Route::post('/submit',[CarBookingController::class, 'submit'])->name('submit');
+
 });
