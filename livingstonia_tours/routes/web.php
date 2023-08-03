@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TourServiceController;
+use App\Http\Controllers\ServiceController;
+
 
 
 /*
@@ -21,3 +23,4 @@ Route::get('/', function () {
 
 
 Route::get('/tour_packages', [TourServiceController::class, 'index'])->name('tour-packages.index');
+Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
