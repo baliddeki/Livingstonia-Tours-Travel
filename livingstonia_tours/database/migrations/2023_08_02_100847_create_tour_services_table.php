@@ -15,8 +15,9 @@ return new class extends Migration
             $table->bigIncrements('tID');
             $table->string('tName')->unique();
             $table->double('tBill');
-            $table->timestamps();
+            $table->string('tDescription');
             $table->string('tImage')->nullable();
+            $table->timestamps();
         });
     }
 
