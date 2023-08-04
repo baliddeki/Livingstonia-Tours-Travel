@@ -19,4 +19,8 @@ Route::get('/', function () {
     return view('landing_page');
 });
 
-Route::get('/hotel', [hotelController::class, 'index']);
+Route::resource('/hotel', hotelController::class);
+
+// Route::get('/hoteldetails', function () {
+//     return view('hotelpage.details');
+// });
