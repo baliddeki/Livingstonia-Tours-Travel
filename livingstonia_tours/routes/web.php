@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\hotelController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,4 @@ Route::get('/', function () {
     return view('landing_page');
 });
 
-Route::get('/hotelbooking', function () {
-    return view('hotelpage.hotels');
-});
+Route::get('/hotel', hotelController::class);
