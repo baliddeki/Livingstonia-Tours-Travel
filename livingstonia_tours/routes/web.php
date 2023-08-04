@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('landing_page');
 });
 
-Route::get('/hotelboooking', function () {
-    return view('landing_page');
+Route::get('/hotelbooking', function () {
+    return view('hotelpage.hotels');
 });
