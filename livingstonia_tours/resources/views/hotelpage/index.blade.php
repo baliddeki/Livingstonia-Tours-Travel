@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('header_title', 'HOTEL BOOKING')
+@section('sub_title', 'HOTEL BOOKING')
+@section('prev_page_link', 'services')
 @section('content')
 
 

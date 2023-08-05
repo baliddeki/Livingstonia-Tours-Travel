@@ -78,10 +78,10 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                         <div class="navbar-nav ml-auto py-0">
-                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="/" class="nav-item nav-link">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="service.html" class="nav-item nav-link">Services</a>
-                            <a href="package.html" class="nav-item nav-link active">Tour Packages</a>
+                            <a href="services" class="nav-item nav-link {{ Request::is('services') ? 'active' : '' }}">Services</a>
+                            <a href="package.html" class="nav-item nav-link">Tour Packages</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu border-0 rounded-0 m-0">
@@ -104,11 +104,11 @@
         <div class="container-fluid page-header">
             <div class="container">
                 <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                    <h3 class="display-4 text-white text-uppercase">Packages</h3>
+                    <h3 class="display-4 text-white text-uppercase">@yield('header_title')</h3>
                     <div class="d-inline-flex text-white">
-                        <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+                        <p class="m-0 text-uppercase"><a class="text-white" href="@yield('prev_page_link')">@yield('prev_page_link')</a></p>
                         <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                        <p class="m-0 text-uppercase">Packages</p>
+                        <p class="m-0 text-uppercase">@yield('sub_title')</p>
                     </div>
                 </div>
             </div>

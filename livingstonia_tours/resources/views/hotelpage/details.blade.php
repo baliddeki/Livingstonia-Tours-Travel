@@ -1,10 +1,15 @@
 @extends('layouts.app')
+@section('header_title', 'HOTEL DETAILS')
+@section('sub_title', 'HOTEL DETAILS')
+@section('prev_page_link', 'hotel.index')
 
 @section('content')
     
 <!-- hotel images start -->
     <div class="container-fluid py-5">
         <div class="container pt-2 pb-3">
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">About Us</h6>
+            <h1 class="mb-3">We Provide Best Tour Packages In Your Budget</h1>
             <div class="row">
                 <div class="col">
                     <div class="position-relative h-100">
