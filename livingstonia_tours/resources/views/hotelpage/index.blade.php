@@ -17,7 +17,7 @@
                 @foreach($hotels as $hotel)
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="img/package-1.jpg" alt="">
+                        <img class="img-fluid" src="img/serena.png" alt="">
                         <div class="p-4">
                              <a class="h5 text-decoration-none" href="hotel/{{$hotel->hId}}">{{$hotel->hName}}</a>
                             <div class="d-flex justify-content-between mb-3">
@@ -27,7 +27,7 @@
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
-                                    <h5 class="m-0">$350</h5>
+                                    <h5 class="m-0">{{$hotel->hType}}</h5>
                                 </div>
                             </div>
                         </div>

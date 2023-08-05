@@ -36,8 +36,9 @@ class hotelController extends Controller
      */
     public function show(string $hId)
     {
-        $data = Hotel::find($hId);
-        return view('hotelpage.details', compact('data'));
+        $hotel = Hotel::find($hId);
+
+        return view('hotelpage.details', compact('hotel'));
     }
 
     /**

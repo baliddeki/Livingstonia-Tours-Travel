@@ -1,19 +1,19 @@
 @extends('layouts.app')
 @section('header_title', 'HOTEL DETAILS')
-@section('sub_title', 'HOTEL DETAILS')
-@section('prev_page_link', 'hotel.index')
+
 
 @section('content')
-    
+
 <!-- hotel images start -->
     <div class="container-fluid py-5">
         <div class="container pt-2 pb-3">
-            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">About Us</h6>
-            <h1 class="mb-3">We Provide Best Tour Packages In Your Budget</h1>
+            <a href="{{route('hotel.index') }}">Go back to Hotel Page</a>
+            <h5 class="text-primary text-uppercase" style="letter-spacing: 5px;">{{$hotel->hName}}</h6>
+            <h6 class="mb-3">{{$hotel->hDescription}}</h1>
             <div class="row">
                 <div class="col">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="{{ asset('img/about.jpg') }}" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="{{ asset('img/speke.jpg') }}" style="object-fit: cover;">
                     </div>
                 </div>                
                 <!-- Right Column -->
@@ -22,19 +22,19 @@
                         <!-- Right Column Row 1 -->
                         <div class="row mb-1">
                             <div class="col-6">
-                                <img class="img-fluid" src="{{ asset('img/about-1.jpg') }}" alt="">
+                                <img class="img-fluid" src="{{ asset('img/bed1.jpeg') }}" alt="">
                             </div>
                             <div class="col-6">
-                                <img class="img-fluid" src="{{ asset('img/about-2.jpg') }}" alt="">
+                                <img class="img-fluid" src="{{ asset('img/bed3.jpg') }}" alt="">
                             </div>
                         </div>
                         <!-- Right Column Row 2 -->
                         <div class="row mt-4">
                             <div class="col-6 mt-4">
-                                <img class="img-fluid" src="{{ asset('img/about-1.jpg') }}" alt="">
+                                <img class="img-fluid" src="{{ asset('img/bed4.jpg') }}" alt="">
                             </div>
                             <div class="col-6 mt-4">
-                                <img class="img-fluid" src="{{ asset('img/about-2.jpg') }}" alt="">
+                                <img class="img-fluid" src="{{ asset('img/bed5.jpg') }}" alt="">
                             </div>
                         </div>
                         
@@ -56,13 +56,13 @@
             <div class="row row-cols-4">
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="{{ asset('img/package-1.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('img/bed1.jpeg') }}" alt="">
                         <div class="p-1">
                             <h6>Double standard room</h6>
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</small>
-                                <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+                            <div class="d-flex flex-column mb-3">
+                                <small class="m-0 p-1"><i class="far fa-square text-primary mr-2"></i>18 sqm</small>
+                                <small class="m-0 p-1"><i class="fas fa-users text-primary mr-2"></i>2 people</small>
+                                <small class="m-0 p-1"><i class="fas fa-bed text-primary mr-2"></i>1 queen bed or 2 separate beds</small>
                             </div>                          
                             
                         </div>
@@ -70,13 +70,13 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="{{ asset('img/package-1.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('img/bed3.jpg') }}" alt="">
                         <div class="p-1">
                             <h6>comfort single</h6>
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</small>
-                                <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+                            <div class="d-flex flex-column mb-3">
+                                <small class="m-0 p-1"><i class="far fa-square text-primary mr-2"></i>21 sqm</small>
+                                <small class="m-0 p-1"><i class="fas fa-users text-primary mr-2"></i>2 people</small>
+                                <small class="m-0 p-1"><i class="fas fa-bed text-primary mr-2"></i>1 king size bed</small>
                             </div>                          
                             
                         </div>
@@ -84,13 +84,13 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="{{ asset('img/package-1.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('img/bed4.jpg') }}" alt="">
                         <div class="p-1">
                             <h6>Double fancy room</h6>
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</small>
-                                <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+                            <div class="d-flex flex-column mb-3">
+                                <small class="m-0 p-1"><i class="far fa-square text-primary mr-2"></i>35 sqm</small>
+                                <small class="m-0 p-1"><i class="fas fa-users text-primary mr-2"></i>2 people</small>
+                                <small class="m-0 p-1"><i class="fas fa-bed text-primary mr-2"></i>1 king size bed or 2 separate beds</small>
                             </div>                          
                             
                         </div>
@@ -98,13 +98,13 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="{{ asset('img/package-1.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('img/bed5.jpg') }}" alt="">
                         <div class="p-1">
                             <h6>Double standard room</h6>
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</small>
-                                <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+                            <div class="d-flex flex-column mb-3">
+                                <small class="m-0 p-1"><i class="far fa-square text-primary mr-2"></i>18 sqm</small>
+                                <small class="m-0 p-1"><i class="fas fa-users text-primary mr-2"></i>2 people</small>
+                                <small class="m-0 p-1"><i class="fas fa-bed text-primary mr-2"></i>1 queen bed or 2 separate beds</small>
                             </div>                          
                             
                         </div>
@@ -120,7 +120,7 @@
     <div class="container-fluid py-2">
         <div class="container pt-2 pb-2">
             <div class="text-start mb-2 pb-2">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Book (HN)</h6>
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Book {{$hotel->hName}}</h6>
                 
             </div>
             <form action="" method="">
@@ -132,15 +132,15 @@
                             <div class="p-4">
                                 <h6 class="text-primary " >Amenities</h6>
                                 <div class="d-flex justify-content-between mb-3">
-                                    <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Free Wifi</small>
-                                    <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>Free Parking</small>
-                                    <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>Air conditioning</small>
+                                    <small class="m-0"><i class="fas fa-wifi text-primary mr-2"></i>Free Wifi</small>
+                                    <small class="m-0"><i class="fas fa-parking text-primary mr-2"></i>Free Parking</small>
+                                    <small class="m-0"><i class="fas fa-air-conditioner text-primary mr-2"></i>Air conditioning</small>
                                     
                                 </div>
                                 <div class="d-flex justify-content-between mb-3">
-                                    <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Key card acess</small>
-                                    <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                    <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+                                    <small class="m-0"><i class="fas fa-address-card text-primary mr-2"></i>Key card acess</small>
+                                    <small class="m-0"><i class="fas fa-swimming-pool text-primary mr-2"></i>Swimming pool</small>
+                                    <small class="m-0"><i class="fas fa-dumbbell text-primary mr-2"></i>Gym</small>
                                     
                                 </div>
                                 <br>
