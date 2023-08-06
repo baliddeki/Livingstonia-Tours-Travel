@@ -21,9 +21,9 @@ Route::get('/', function () {
 
 Route::resource('/hotel', hotelController::class);
 
-// Route::get('/hoteldetails', function () {
-//     return view('hotelpage.details');
-// });
+Route::get('/hoteldetails', function () {
+    return view('hotelpage.details');
+});
 
 Route::get('/services', function () {
     return view('services');
