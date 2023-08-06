@@ -12,9 +12,14 @@ class TourServiceController extends Controller
      */
     public function index()
     {
+        //setting page title
+        $page_title = 'Tour Packages';
+
         //fetch all tour packages from the database
         $tour_packages = TourService::all();
-        return view('tour_services.index', compact('tour_packages'));
+
+        //returning the tour packages view
+        return view('tour_services.index', compact('tour_packages', 'page_title'));
     }
 
     /**
