@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\TourService;
 use App\Models\Service;
 use App\Models\About;
+use App\Models\Hotel;
 
 use Illuminate\Http\Request;
 
