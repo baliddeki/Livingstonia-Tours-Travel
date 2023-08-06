@@ -28,6 +28,6 @@ Route::get('/about', [AboutController::class, 'index'])->name('about.index');
 
 Route::resource('/hotel', hotelController::class);
 
-// Route::get('/hoteldetails', function () {
-//     return view('hotelpage.details');
-// });
+Route::get('/hoteldetails', function () {
+    return view('hotelpage.details');
+});
