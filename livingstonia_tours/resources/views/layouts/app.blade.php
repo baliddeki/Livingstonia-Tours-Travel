@@ -4,11 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>@yield('title') LivingstoniaTours</title>
-=======
-    <title>@yield('title') - LivingstoniaTours</title>
->>>>>>> HotelBooking
     <!-- Add your CSS and JavaScript files here -->
 
     <!-- Favicon -->
@@ -20,11 +16,6 @@
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-<<<<<<< HEAD
-=======
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome-thin.min.css">
->>>>>>> HotelBooking
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -32,10 +23,6 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-<<<<<<< HEAD
-=======
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
->>>>>>> HotelBooking
 
 </head>
 
@@ -50,20 +37,12 @@
                         <div class="d-inline-flex align-items-center">
                             <p><i class="fa fa-envelope mr-2"></i>info@livingstoniasafaris.com</p>
                             <p class="text-body px-3">|</p>
-<<<<<<< HEAD
                             <p><i class="fa fa-phone-alt mr-2"></i>+256772861936</p>
-=======
-                            <p><i class="fa fa-phone-alt mr-2"></i>+256709903035</p>
->>>>>>> HotelBooking
                         </div>
                     </div>
                     <div class="col-lg-6 text-center text-lg-right">
                         <div class="d-inline-flex align-items-center">
-<<<<<<< HEAD
                             <a class="text-primary px-3" href="https://www.facebook.com/livingstoniaSafaris">
-=======
-                            <a class="text-primary px-3" href="">
->>>>>>> HotelBooking
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                             <a class="text-primary px-3" href="">
@@ -90,33 +69,21 @@
         <div class="container-fluid position-relative nav-bar p-0">
             <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
                 <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
-<<<<<<< HEAD
                     <img src="{{ asset('img/livingstonia_logo.jpg') }}" alt="Livingstonia Safaris Logo" class="mr-2" width="80" height="80">
                     <a href="{{ route('landing_page.index') }}" class="navbar-brand">
                         <h1 class="m-0 text-primary"><span class="text-dark">LIVING</span>STONIA <br>TOU<span>RS</h1>
-=======
-                    <a href="" class="navbar-brand">
-                        <h1 class="m-0 text-primary"><span class="text-dark">TRAVEL</span>ER</h1>
->>>>>>> HotelBooking
                     </a>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                         <div class="navbar-nav ml-auto py-0">
-<<<<<<< HEAD
                             <a href="{{route('landing_page.index')}}" class="nav-item nav-link">Home</a>
                             <a href="{{ route('about.index') }}" class="nav-item nav-link">About</a>
 
                             {{-- changing the links to Services & Tour Packages --}}
                             <a href="{{ route('services.index') }}" class="nav-item nav-link">Services</a>
                             <a href="{{ route('tour-packages.index') }}" class="nav-item nav-link">>Tour Packages</a>
-=======
-                            <a href="/" class="nav-item nav-link">Home</a>
-                            <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="services" class="nav-item nav-link {{ Request::is('services') ? 'active' : '' }}">Services</a>
-                            <a href="package.html" class="nav-item nav-link">Tour Packages</a>
->>>>>>> HotelBooking
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu border-0 rounded-0 m-0">
@@ -139,7 +106,6 @@
         <div class="container-fluid page-header">
             <div class="container">
                 <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-<<<<<<< HEAD
                     {{-- setting card to display current page name --}}
                     <h3 class="display-4 text-white text-uppercase">{{ $page_title }}</h3>
                     <div class="d-inline-flex text-white">
@@ -148,13 +114,6 @@
                         <p class="m-0 text-uppercase"><a class="text-white" href="{{ route('landing_page.index') }}">Home</a></p>
                         <i class="fa fa-angle-double-right pt-1 px-3"></i>
                         <p class="m-0 text-uppercase">{{ $page_title }}</p>
-=======
-                    <h3 class="display-4 text-white text-uppercase">@yield('header_title')</h3>
-                    <div class="d-inline-flex text-white">
-                        <p class="m-0 text-uppercase"><a class="text-white" href="@yield('prev_page_link')">@yield('prev_page_link')</a></p>
-                        <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                        <p class="m-0 text-uppercase">@yield('sub_title')</p>
->>>>>>> HotelBooking
                     </div>
                 </div>
             </div>
@@ -162,11 +121,7 @@
         <!-- Header End -->
 
         <!-- Booking Start -->
-<<<<<<< HEAD
         <div class=" container-fluid booking mt-5 pb-5">
-=======
-        <div class="container-fluid booking mt-5 pb-5">
->>>>>>> HotelBooking
             <div class="container pb-5">
                 <div class="bg-light shadow" style="padding: 30px;">
                     <div class="row align-items-center" style="min-height: 60px;">
@@ -299,7 +254,6 @@
         <!-- Footer End -->
     </footer>
 </body>
-<<<<<<< HEAD
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
@@ -315,7 +269,5 @@
 
 <!-- Template Javascript -->
 <script src="js/main.js"></script>
-=======
->>>>>>> HotelBooking
 
 </html>
