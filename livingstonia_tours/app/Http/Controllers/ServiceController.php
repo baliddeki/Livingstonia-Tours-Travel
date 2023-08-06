@@ -12,8 +12,14 @@ class ServiceController extends Controller
      */
     public function index()
     {
+        //setting page title
+        $page_title = 'Services';
+
+        //fetch all services from the database
         $firm_services = Service::all();
-        return view('services', compact('firm_services'));
+
+        //returning the services view
+        return view('services', compact('firm_services', 'page_title'));
     }
 
     /**
