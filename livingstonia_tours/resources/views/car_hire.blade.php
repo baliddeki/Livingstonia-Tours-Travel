@@ -97,76 +97,24 @@
     </div>
     
     <!-- Car hire categories -->
-    <!-- Wrap the cards in a container -->
+ <!-- Wrap the cards in a container -->
 <div class="container">
-  <div class="row">
-    <!-- Add multiple card elements with the car information -->
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <img src="img/destination-1.jpg" class="card-img-top" alt="Car 1">
-        <div class="card-body">
-          <h5 class="card-title">Car 1</h5>
-          <p class="card-text">Description of Car 1.</p>
-          <a href="#" class="btn btn-primary">Rent Now</a>
+    <div class="row">
+        @foreach($cars as $car)
+        <!-- Add multiple card elements with the car information -->
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ $car->cImage }}" class="card-img-top" alt="{{ $car->cName }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ $car->cName }}</h5>
+                    <p class="card-text">{{ $car->cDescription }}</p>
+                    <p class="card-text">Unit: {{ $car->cUnit }}</p>
+                    <a href="#" class="btn btn-primary">Rent Now</a>
+                </div>
+            </div>
         </div>
-      </div>
+        @endforeach
     </div>
-    <!-- Add more card elements for other cars -->
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <img src="img/destination-2.jpg" class="card-img-top" alt="Car 2">
-        <div class="card-body">
-          <h5 class="card-title">Car 2</h5>
-          <p class="card-text">Description of Car 2.</p>
-          <a href="#" class="btn btn-primary">Rent Now</a>
-        </div>
-      </div>
-    </div>
-    <!-- Add more card elements for other cars -->
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <img src="img/destination-3.jpg" class="card-img-top" alt="Car 3">
-        <div class="card-body">
-          <h5 class="card-title">Car 3</h5>
-          <p class="card-text">Description of Car 3.</p>
-          <a href="#" class="btn btn-primary">Rent Now</a>
-        </div>
-      </div>
-    </div>
-    <!-- Add more card elements for other cars -->
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <img src="img/destination-3.jpg" class="card-img-top" alt="Car 3">
-        <div class="card-body">
-          <h5 class="card-title">Car 3</h5>
-          <p class="card-text">Description of Car 3.</p>
-          <a href="#" class="btn btn-primary">Rent Now</a>
-        </div>
-      </div>
-    </div>
-    <!-- Add more card elements for other cars -->
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <img src="img/destination-3.jpg" class="card-img-top" alt="Car 3">
-        <div class="card-body">
-          <h5 class="card-title">Car 3</h5>
-          <p class="card-text">Description of Car 3.</p>
-          <a href="#" class="btn btn-primary">Rent Now</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <img src="img/destination-3.jpg" class="card-img-top" alt="Car 3">
-        <div class="card-body">
-          <h5 class="card-title">Car 3</h5>
-          <p class="card-text">Description of Car 3.</p>
-          <a href="#" class="btn btn-primary">Rent Now</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
 </div>
 
 

@@ -12,10 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('car_hire_services', function (Blueprint $table) {
-            $table->bigIncrements('cID'); // Use bigIncrements for an auto-incrementing primary key of type int
-            $table->string('cName');
-            $table->string('cUnit');
-            $table->string('cDescription');
+            $table->bigIncrements('cID');
+            $table->string('cName'); // Car name
+            $table->string('cUnit'); // Car unit
+            $table->string('cDescription'); // Car description
+            $table->string('cImage'); // Car image (you can use a string column to store the image path)
             $table->timestamps();
         });
     }
