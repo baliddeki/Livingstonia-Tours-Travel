@@ -6,7 +6,7 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 
-use App\Http\Controllers\hotelController;
+use App\Http\Controllers\HotelController;
 
 
 /*
@@ -24,10 +24,10 @@ Route::get('/', [HomeController::class, 'index'])->name('landing_page.index');
 Route::get('/tour_packages', [TourServiceController::class, 'index'])->name('tour-packages.index');
 Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
 Route::get('/about', [AboutController::class, 'index'])->name('about.index');
+Route::get('/redirect_to_service', [ServiceController::class, 'redirectToService'])->name('redirect_to_service');
+Route::get('/hotel', [HotelController::class, 'index'])->name('hotel.index');
 
-
-Route::resource('/hotel', hotelController::class);
 
 Route::get('/hoteldetails', function () {
-    return view('hotelpage.details');
+    return view('hotel.details');
 });

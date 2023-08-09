@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Hotel;
 use App\Models\Service;
 
-class hotelController extends Controller
+class HotelController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class hotelController extends Controller
     public function index()
     {
         $hotels = Hotel::all();
-        return view('hotelpage.index', compact('hotels'));
+        return view('hotel.index', compact('hotels'));
     }
 
     /**
@@ -39,7 +39,7 @@ class hotelController extends Controller
     {
         $hotel = Hotel::find($hId);
 
-        return view('hotelpage.details', compact('hotel'));
+        return view('hotel.details', compact('hotel'));
     }
 
     /**
