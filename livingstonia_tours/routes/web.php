@@ -26,9 +26,6 @@ Route::resource('services', ServiceController::class);
 Route::resource('about', AboutController::class);
 Route::resource('/hotel', hotelController::class);
 
-Route::get('/hoteldetails', function () {
-    return view('hotelpage.details');
-});
 
 Route::get('/hoteldetails', function () {
     return view('hotel.details');

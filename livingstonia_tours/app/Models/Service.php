@@ -23,19 +23,10 @@ class Service extends Model
 
 
     // Method to get the route name based on the service type
-    /* public function getRouteName()
-    {
 
-        // Convert the service type to camel case and add '.index' suffix
-        # get route name from database
-        # $routeName = Str::of($this->sType)->snake()->append('.index');
-        if (($this->sType) == 'Hotel') {
-            $routeName = 'hotel.index';
-        } elseif (($this->sType) == 'Tour') {
-            $routeName = 'tour-packages.index';
-        } else {
-            $routeName = null;
-        }
-        return $routeName;
-    }*/
+
+    public function getRouteName()
+    {
+        return self::SERVICE_TYPE_ROUTES[$this->sType] ?? null;
+    }
 }
