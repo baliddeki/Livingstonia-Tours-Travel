@@ -13,9 +13,9 @@
                 <div class="service-item bg-white text-center mb-2 py-5 px-4">
                     <a href="{{ route($service_type_routes[$service->sType]) }}">
                         <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                        <h5 class="mb-2">{{$service->sType}}</h5>
-                        <p class="m-0">{{$service->sDescription}}</p>
                     </a>
+                    <h5 class="mb-2">{{$service->sType}}</h5>
+                    <p class="m-0">{{$service->sDescription}}</p>
                 </div>
             </div>
             @endforeach
