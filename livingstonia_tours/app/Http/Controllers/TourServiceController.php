@@ -2,19 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TourService;
 use Illuminate\Http\Request;
-use App\Models\Hotel;
-use App\Models\Service;
 
-class HotelController extends Controller
+class TourServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $hotels = Hotel::all();
-        return view('hotel.index', compact('hotels'));
+        //setting page title
+        $page_title = 'Tour Packages';
+
+        //fetch all tour packages from the database
+        $tour_packages = TourService::all();
+
+        //returning the tour packages view
+        return view('tour_services.index', compact('tour_packages', 'page_title'));
     }
 
     /**
@@ -30,16 +35,14 @@ class HotelController extends Controller
      */
     public function store(Request $request)
     {
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $hId)
+    public function show(string $id)
     {
-        $hotel = Hotel::find($hId);
-
-        return view('hotel.details', compact('hotel'));
     }
 
     /**

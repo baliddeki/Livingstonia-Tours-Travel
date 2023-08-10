@@ -3,18 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Hotel;
-use App\Models\Service;
 
-class HotelController extends Controller
+class AboutController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $hotels = Hotel::all();
-        return view('hotel.index', compact('hotels'));
+        //setting page title
+        $page_title = "About Us";
     }
 
     /**
@@ -30,16 +28,15 @@ class HotelController extends Controller
      */
     public function store(Request $request)
     {
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $hId)
+    public function show(string $id)
     {
-        $hotel = Hotel::find($hId);
-
-        return view('hotel.details', compact('hotel'));
+        //
     }
 
     /**
