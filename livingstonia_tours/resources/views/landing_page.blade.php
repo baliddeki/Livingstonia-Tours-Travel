@@ -40,7 +40,7 @@
                     <a href="{{ route('landing_page.index') }}" class="nav-item nav-link active">Home</a>
                     <a href="{{ route('about.index') }}" class="nav-item nav-link">About</a>
                     <a href="{{ route('services.index') }}" class="nav-item nav-link">Services</a>
-                    <a href="{{ route('tour-packages.index') }}" class="nav-item nav-link">>Tour Packages</a>
+                    <a href="{{ route('tour-packages.index') }}" class="nav-item nav-link">Tour Packages</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu border-0 rounded-0 m-0">
@@ -51,7 +51,7 @@
                             <a href="testimonial.blade.php" class="dropdown-item">Testimonial</a>
                         </div>
                     </div>
-                    <a href="contact.blade.php" class="nav-item nav-link">Reach to Us</a>
+                    <a href="contact.blade.php" class="nav-item nav-link">Login</a>
                 </div>
             </div>
         </nav>
@@ -254,18 +254,21 @@
 <!-- Destination Start -->
 
 
+@section('content')
 <!-- Service Start -->
 <div class="container-fluid py-5">
     <div class="container pt-5 pb-3">
         <div class="text-center mb-3 pb-3">
-            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Services</h6>
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">{{ $page_title }}</h6>
             <h1>Tours & Travel Services</h1>
         </div>
         <div class="row">
             @foreach($firm_services as $service)
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                    <i class="fa fa-2x fa-route mx-auto mb-4"></i>
+                    <a href="{{ route($service_type_routes[$service->sType]) }}">
+                        <i class="fa fa-2x fa-route mx-auto mb-4"></i>
+                    </a>
                     <h5 class="mb-2">{{$service->sType}}</h5>
                     <p class="m-0">{{$service->sDescription}}</p>
                 </div>
@@ -274,6 +277,7 @@
         </div>
     </div>
 </div>
+<!-- Service End -->
 
 
 <!-- Packages Start -->

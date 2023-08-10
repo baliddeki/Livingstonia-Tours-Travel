@@ -1,10 +1,14 @@
 @extends('layouts.app')
+@section('header_title', 'SERVICES')
+@section('sub_title', 'SERVICES')
+@section('prev_page_link', 'HOME')
+
 @section('content')
 <!-- Service Start -->
 <div class="container-fluid py-5">
     <div class="container pt-5 pb-3">
         <div class="text-center mb-3 pb-3">
-            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Services</h6>
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">{{ $page_title }}</h6>
             <h1>Tours & Travel Services</h1>
         </div>
         <div class="row">

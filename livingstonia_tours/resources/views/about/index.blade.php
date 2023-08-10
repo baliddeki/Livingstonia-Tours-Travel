@@ -1,4 +1,8 @@
 @extends('layouts.app')
+@section('header_title', 'ABOUT')
+@section('sub_title', 'ABOUT')
+@section('prev_page_link', 'HOME')
+
 @section('content')
 
 <!-- About Start -->
