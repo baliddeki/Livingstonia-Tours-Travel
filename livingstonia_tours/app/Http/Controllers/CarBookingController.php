@@ -24,31 +24,34 @@ class CarBookingController extends Controller
             'destinationAddress' => 'required|string',
             'daysOfStay' => 'required|string',
             'estimatedParticipates' => 'required|string',
-            
+
 
 
         ]);
 
         // Create a new car booking record to save in the database
-        $bookingData = new CarBooking(); 
-        $bookingData->name=$request->input('name');
-        $bookingData->Email=$request->input('Email');
-        $bookingData->phone=$request->input('phone');
-        $bookingData->dateOfDeparture=$request->input('dateOfDeparture');
-        $bookingData->currentAddress=$request->input('currentAddress');
-        $bookingData->destinationAddress=$request->input('destinationAddress');
-        $bookingData->daysOfStay=$request->input('daysOfStay');
-        $bookingData->estimatedParticipates=$request->input('estimatedParticipates');
+        $bookingData = new CarBooking();
+        $bookingData->name = $request->input('name');
+        $bookingData->Email = $request->input('Email');
+        $bookingData->phone = $request->input('phone');
+        $bookingData->dateOfDeparture = $request->input('dateOfDeparture');
+        $bookingData->currentAddress = $request->input('currentAddress');
+        $bookingData->destinationAddress = $request->input('destinationAddress');
+        $bookingData->daysOfStay = $request->input('daysOfStay');
+        $bookingData->estimatedParticipates = $request->input('estimatedParticipates');
         //$bookingData->save();
 
         // Add some debugging statements to check for any errors
         try {
             $bookingData->save();
+
             // Log a success message for debugging purposes
             \Log::info('Booking data saved successfully.');
         } catch (\Exception $e) {
+
             // Log or print the error for debugging
             \Log::error('An error occurred while saving the booking data: ' . $e->getMessage());
+
             // Return a response with an error message
             return redirect()->back()->with('error', 'An error occurred while saving the booking data.');
         }
@@ -56,7 +59,4 @@ class CarBookingController extends Controller
         // If everything is successful, redirect to a success page or do any other actions
         return redirect()->route('success')->with('success', 'Booking submitted successfully!');
     }
-        
-    }
-
-
+}

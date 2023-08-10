@@ -27,7 +27,6 @@ Route::get('/tour_packages', [TourServiceController::class, 'index'])->name('tou
 Route::resource('services', ServiceController::class);
 Route::resource('/about', AboutController::class);
 Route::resource('/hotel', HotelController::class);
-Route::resource('/car_hire', hotelController::class);
 Route::resource('/visa_processing', hotelController::class);
 Route::resource('/air_ticketing', hotelController::class);
 
@@ -38,17 +37,14 @@ Route::get('/hoteldetails', function () {
     return view('hotel.details');
 });
 
-Route::get('/', function () {
-    return view('landing_page');
-});
 
 Route::middleware(['web'])->group(function () {
     //My routes here
 
     //car hire routes here
-    Route::get('/carhire', [CarHireController::class, 'carhire'])->name('carhire');
+    Route::get('/carhire', [CarHireController::class, 'carhire'])->name('car_hire.index');
 
     //Car booking routes here
-    Route::get('/carbooking', [CarBookingController::class, 'carbooking'])->name('carbooking');
-    Route::post('/submit', [CarBookingController::class, 'submit'])->name('submit');
+    Route::get('/car_hire/carbooking', [CarBookingController::class, 'carbooking'])->name('carbooking');
+    Route::post('/car_hire.submit', [CarBookingController::class, 'submit'])->name('submit');
 });
