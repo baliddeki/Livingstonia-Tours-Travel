@@ -27,13 +27,13 @@ class ServiceController extends Controller
         $routeName = $service->getRouteName();
 
         if ($routeName !== null) {
-            // Redirect to the corresponding service index page
             return redirect()->route($routeName);
         } else {
             // Handle the case where the service type is not recognized
             // Redirect to some other page or show an error message
         }
     }
+
 
     /**
      * Show the form for creating a new resource.

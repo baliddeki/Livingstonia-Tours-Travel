@@ -11,7 +11,7 @@
             @foreach($firm_services as $service)
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                    <a href="{{ route('redirect_to_service', ['service' => urlencode($service->sId)]) }}">
+                    <a href="{{ route('redirect_to_service') }}?service={{ urlencode($service->sId) }}">
                         <i class="fa fa-2x fa-route mx-auto mb-4"></i>
                         <h5 class="mb-2">{{$service->sType}}</h5>
                         <p class="m-0">{{$service->sDescription}}</p>
