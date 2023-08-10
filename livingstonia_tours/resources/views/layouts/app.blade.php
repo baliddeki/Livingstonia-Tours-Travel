@@ -16,8 +16,6 @@
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome-thin.min.css">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -106,7 +104,7 @@
         <div class="container-fluid page-header">
             <div class="container">
                 <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                    <h3 class="display-4 text-white text-uppercase">@yield('header_title')</h3>
+                    {{-- <h3 class="display-4 text-white text-uppercase">@yield('header_title')</h3> --}}
                     <div class="d-inline-flex text-white">
                         <p class="m-0 text-uppercase"><a class="text-white" href="@yield('prev_page_link')">@yield('prev_page_link')</a></p>
                         <i class="fa fa-angle-double-right pt-1 px-3"></i>

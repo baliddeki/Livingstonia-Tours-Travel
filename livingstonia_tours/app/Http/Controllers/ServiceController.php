@@ -3,19 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Hotel;
 use App\Models\Service;
 
-class HotelController extends Controller
+class ServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $hotels = Hotel::all();
-        return view('hotel.index', compact('hotels'));
+        //setting page title
+        $page_title = 'Services';
+
+        //fetch all services from the database
+        $firm_services = Service::all();
+
+        // Pass the service type routes array to the view
+        $service_type_routes = Service::SERVICE_TYPE_ROUTES;
+
+        //returning the services view
+        return view('services', compact('firm_services', 'page_title', 'service_type_routes'));
     }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -30,16 +40,15 @@ class HotelController extends Controller
      */
     public function store(Request $request)
     {
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $hId)
+    public function show(string $id)
     {
-        $hotel = Hotel::find($hId);
-
-        return view('hotel.details', compact('hotel'));
+        //
     }
 
     /**
