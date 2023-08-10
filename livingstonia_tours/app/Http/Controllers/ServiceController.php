@@ -18,21 +18,13 @@ class ServiceController extends Controller
         //fetch all services from the database
         $firm_services = Service::all();
 
+        // Pass the service type routes array to the view
+        $service_type_routes = Service::SERVICE_TYPE_ROUTES;
+
         //returning the services view
-        return view('services', compact('firm_services', 'page_title'));
+        return view('services', compact('firm_services', 'page_title', 'service_type_routes'));
     }
 
-    public function redirectToService(Service $service)
-    {
-        $routeName = $service->getRouteName();
-
-        if ($routeName !== null) {
-            return redirect()->route($routeName);
-        } else {
-            // Handle the case where the service type is not recognized
-            // Redirect to some other page or show an error message
-        }
-    }
 
 
     /**
