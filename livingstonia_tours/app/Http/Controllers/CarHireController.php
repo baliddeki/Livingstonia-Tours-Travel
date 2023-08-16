@@ -11,6 +11,6 @@ class CarHireController extends Controller
     public function carhire()
     {
         $cars = CarHireService::all();
-        return view('car_hire', compact('cars'));
+        return view('car_hire.index', compact('cars'));
     }
 }

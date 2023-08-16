@@ -584,7 +584,9 @@ mark,
 
 .img-fluid {
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+
 }
 
 .img-thumbnail {
@@ -736,6 +738,8 @@ pre code {
   flex: 0 0 33.33333%;
   max-width: 33.33333%;
 }
+
+
 
 .row-cols-4 > * {
   flex: 0 0 25%;
