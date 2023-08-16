@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('header_title', 'TOUR PACKAGES')
+@section('sub_title', 'TOUR SERVICES')
+@section('prev_page_link', 'services')
 
 @section('content')
 <div class="container-fluid py-5">

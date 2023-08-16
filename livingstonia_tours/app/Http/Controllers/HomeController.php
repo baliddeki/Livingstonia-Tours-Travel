@@ -28,8 +28,11 @@ class HomeController extends Controller
         //fetch all tour packages from the database
         $tour_packages = TourService::all();
 
+        // Pass the service type routes array to the view
+        $service_type_routes = Service::SERVICE_TYPE_ROUTES;
+
         //returning the landing page view
-        return view('landing_page', compact('firm_services', 'tour_packages', 'page_title', 'about'));
+        return view('landing_page', compact('firm_services', 'tour_packages', 'page_title', 'about', 'service_type_routes'));
     }
 
     /**

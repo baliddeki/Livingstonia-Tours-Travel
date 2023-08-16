@@ -1,10 +1,14 @@
 @extends('layouts.app')
+@section('header_title', 'SERVICES')
+@section('sub_title', 'SERVICES')
+@section('prev_page_link', 'HOME')
+
 @section('content')
 <!-- Service Start -->
 <div class="container-fluid py-5">
     <div class="container pt-5 pb-3">
         <div class="text-center mb-3 pb-3">
-            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Services</h6>
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">{{ $page_title }}</h6>
             <h1>Tours & Travel Services</h1>
         </div>
         <div class="row">
@@ -13,9 +17,9 @@
                 <div class="service-item bg-white text-center mb-2 py-5 px-4">
                     <a href="{{ route($service_type_routes[$service->sType]) }}">
                         <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                        <h5 class="mb-2">{{$service->sType}}</h5>
-                        <p class="m-0">{{$service->sDescription}}</p>
                     </a>
+                    <h5 class="mb-2">{{$service->sType}}</h5>
+                    <p class="m-0">{{$service->sDescription}}</p>
                 </div>
             </div>
             @endforeach

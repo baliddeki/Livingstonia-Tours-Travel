@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title') - LivingstoniaTours</title>
+    <title>@yield('title') LivingstoniaTours</title>
     <!-- Add your CSS and JavaScript files here -->
 
     <!-- Favicon -->
@@ -78,20 +78,21 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                         <div class="navbar-nav ml-auto py-0">
-                            <a href="/" class="nav-item nav-link">Home</a>
-                            <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="services" class="nav-item nav-link {{ Request::is('services') ? 'active' : '' }}">Services</a>
-                            <a href="package.html" class="nav-item nav-link">Tour Packages</a>
+                            <a href="{{ route('landing_page.index') }}" class="nav-item nav-link active">Home</a>
+                            <a href="{{ route('about.index') }}" class="nav-item nav-link">About</a>
+                            <a href="{{ route('services.index') }}" class="nav-item nav-link">Services</a>
+                            <a href="{{ route('tour-packages.index') }}" class="nav-item nav-link">Tour Packages</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu border-0 rounded-0 m-0">
-                                    <a href="blog.html" class="dropdown-item">Blogs</a>
+                                    <a href="about.blade.php" class="dropdown-item">Blog Grid</a>
+                                    <a href="singleblog.blade.php" class="dropdown-item">Blog Detail</a>
                                     <a href="destination.html" class="dropdown-item">Destination</a>
                                     <a href="guide.html" class="dropdown-item">Travel Guides</a>
-                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                    <a href="testimonial.blade.php" class="dropdown-item">Testimonial</a>
                                 </div>
                             </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="contact.blade.php" class="nav-item nav-link">Login</a>
                         </div>
                     </div>
                 </nav>
@@ -249,5 +250,25 @@
         <!-- Footer End -->
     </footer>
 </body>
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/tempusdominus/js/moment.min.js"></script>
+<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+<!-- Contact Javascript File -->
+<script src="mail/jqBootstrapValidation.min.js"></script>
+<script src="mail/contact.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
 
 </html>
