@@ -123,7 +123,8 @@
                 <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Book {{$hotel->hName}}</h6>
                 
             </div>
-            <form action="" method="">
+            <form action="{route(hotel.store)}" method="">
+                @csrf
                 <div class="row bg-white">
                     
                     <div class="col  p-4">
@@ -183,7 +184,7 @@
 
                 </div>
                 <div class="row bg-white ">
-                    <div class="d-grid gap-2 p-4">
+                    <div class="col">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
