@@ -45,6 +45,6 @@ Route::middleware(['web'])->group(function () {
     Route::get('/carhire', [CarHireController::class, 'carhire'])->name('car_hire.index');
 
     //Car booking routes here
-    Route::get('/car_hire/carbooking', [CarBookingController::class, 'carbooking'])->name('carbooking');
+    Route::get('/car_hire/git carbooking', [CarBookingController::class, 'carbooking'])->name('carbooking');
     Route::post('/car_hire.submit', [CarBookingController::class, 'submit'])->name('submit');
 });
