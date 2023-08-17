@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CountryController extends Controller
+class VisaProcessingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -12,6 +12,7 @@ class CountryController extends Controller
     public function index()
     {
         //
+        return view('visa_processing.index');
     }
 
     /**

@@ -16,7 +16,7 @@ class Service extends Model
         'Tour' => 'tour-packages.index',
         'Hotel' => 'hotel.index',
         'CarHire' => 'car_hire.index',
-        'VISAProcessing' => 'visa_processing.index',
+        'VISAProcessing' => 'visaprocessing.index',
         'AirTicketing' => 'air_ticketing.index',
     ];
 

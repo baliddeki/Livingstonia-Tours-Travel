@@ -9,4 +9,11 @@ class Hotel extends Service
 {
     use HasFactory;
     protected $primaryKey = 'hId';
+    protected $fillable = [
+        'name',
+        'email',
+        'phone',
+        'address',
+        'city',
+    ];
 }
