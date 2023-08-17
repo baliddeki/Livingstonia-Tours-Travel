@@ -126,7 +126,7 @@
             <form action="" method="">
                 <div class="row bg-white">
                     
-                    <div class="col  p-4">
+                    <div class="col-lg-6 col-md-12 col-sm-12  p-4">
                         
                             <h5>step1: </h5>
                             <div class="p-4">
@@ -158,7 +158,7 @@
                         
                     </div>
 
-                    <div class="col  p-4">
+                    <div class="col-lg-6 col-md-12 col-sm-12 p-4">
                         
                             <h5>step2: Personal Data</h5>
                             <div class="p-4">                           

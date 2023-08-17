@@ -56,7 +56,7 @@
                     <div class="pl-3">
                         <h6 class="m-1">Tourist Visa is Required
 You need a visa to travel to this country. Please use our website to contact our reservation team to help you to apply for visa. Safe Travels!</h6>
-                        <small>Jan 01, 2050</small>
+                        
                     </div>
                 </div>
             </div>
@@ -72,20 +72,20 @@ You need a visa to travel to this country. Please use our website to contact our
             <form action="" method="">
                 <div class="row bg-white">
                     
-                    <div class="col  p-2">
+                    <div class="col-lg-6 col-md-12 col-sm-12  p-2">
                         
                             <h5>step1: Contact info</h5>
                             <div class="p-2">
-                                <label for="numberofpeople" class="form-label">Email</label>
-                                    <input type="number" class="form-control p-2"  placeholder="Number of people"/>
+                                <label for="Email" class="form-label">Email</label>
+                                    <input type="email" class="form-control p-4"  placeholder="email@email.com"/>
                                      <br>
                                 
                                 <label for="numberofpeople" class="form-label">Phone</label>
-                                    <input type="number" class="form-control p-2"  placeholder="Number of people"/>
+                                    <input type="text" class="form-control p-4"  placeholder="+256 700 000 000"/>
                                      <br>   
 
                                 <label for="numberofrooms" class="form-label">Adress</label>
-                                    <input type="number" class="form-control p-2" id="subject" placeholder="Number of rooms"/>
+                                    <input type="text" class="form-control p-4"  placeholder="Kampala, Uganda"/>
                                     <br>
                                     
 
@@ -93,7 +93,7 @@ You need a visa to travel to this country. Please use our website to contact our
                         
                     </div>
 
-                    <div class="col  p-2">
+                    <div class="col-lg-6 col-md-12 col-sm-12  p-2">
                         
                             <h5>step2: Personal Info</h5>
                             <div class="p-2">                           
@@ -103,7 +103,7 @@ You need a visa to travel to this country. Please use our website to contact our
                                     <label for="nameinput" class="form-label">First and Last name</label>
                                     <input type="text" class="form-control p-2" placeholder="e.g. Livingstonia Safari" />
                                      <br>  
-                                    <label for="nameinput" class="form-label">Gender</label><br>
+                                    <label for="Gender" class="form-label">Gender</label><br>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="gender"  value="male">
                                         <label class="form-check-label" >male</label>
@@ -113,13 +113,13 @@ You need a visa to travel to this country. Please use our website to contact our
                                         <label class="form-check-label" >female</label>
                                     </div>
                                      <br>  
-                                    <label for="nameinput" class="form-label">Marital Status</label><br>
+                                    <label for="status" class="form-label">Marital Status</label><br>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="gender"  value="male">
+                                        <input class="form-check-input" type="radio" name="status"  value="male">
                                         <label class="form-check-label" >Single</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="gender"  value="female">
+                                        <input class="form-check-input" type="radio" name="status"  value="female">
                                         <label class="form-check-label" >married</label>
                                     </div>  
                                 </div>
@@ -128,11 +128,9 @@ You need a visa to travel to this country. Please use our website to contact our
                                  
                     
 
-                </div>
-
-                <div class="row bg-white">
+                
                     
-                    <div class="col  p-2">
+                    <div class="col-lg-6 col-md-12 col-sm-12  p-2">
                         
                             <h5>step3: Passport info</h5>
                             <div class="p-2">
@@ -158,9 +156,9 @@ You need a visa to travel to this country. Please use our website to contact our
                         
                     </div>
 
-                    <div class="col  p-2">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
                         
-                            <h5>step2: Personal Info</h5>
+                            <h5>step4: Personal Info</h5>
                             <div class="p-2">                           
                                 
                                 

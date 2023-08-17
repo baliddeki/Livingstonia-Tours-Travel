@@ -42,7 +42,7 @@
                             <i class="fa fa-2x fa-globe text-white"></i>
                         </div>
                         <div class="d-flex flex-column">
-                            <a class="h5 text-decoration-none mt-4" href="">Tanzania</a>
+                            <a class="h5 text-decoration-none mt-4" href="">Tanzania</>
                             
                         </div>
                     </div>
