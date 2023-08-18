@@ -66,4 +66,38 @@ class HotelController extends Controller
     {
         //
     }
+
+    /**
+     * store hotel boking details
+     
+     */
+    public function storeHotelBooking(Request $request)
+    {
+        $request->validate([
+            'hotel_id' => 'required',
+            'check_in' => 'required',
+            'check_out' => 'required',
+            'number_of_people' => 'required',
+            'number_of_rooms' => 'required',
+            'fname' => 'required',
+            'lname' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+        ]);
+
+        $hotel = Hotel::find($request->hotel_id);
+
+        $hotel->bookings()->create([
+            'check_in' => $request->check_in,
+            'check_out' => $request->check_out,
+            'number_of_people' => $request->number_of_people,
+            'number_of_rooms' => $request->number_of_rooms,
+            'fname' => $request->fname,
+            'lname' => $request->lname,
+            'email' => $request->email,
+            'phone' => $request->phone,
+        ]);
+
+        return redirect()->route('hotel.index')->with('success', 'Hotel booking successful');
+    }
 }

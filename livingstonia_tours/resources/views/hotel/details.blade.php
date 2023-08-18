@@ -153,6 +153,14 @@
                                 <label for="numberofrooms" class="form-label">Number of rooms</label>
                                     <input type="number" class="form-control p-4" id="subject" placeholder="Number of rooms"/>
                                     <br>
+
+                                <label for="checkin" class="form-label">Check in</label>
+                                    <input type="date" class="form-control p-4" id="subject" placeholder="Check in"/>
+                                    <br>
+
+                                <label for="checkout" class="form-label">Check out</label>
+                                    <input type="date" class="form-control p-4" id="subject" placeholder="Check out"/>
+                                    <br>
                                     
 
                             </div>
@@ -166,8 +174,11 @@
                                 
                                 
                                 <div class="control-group">
-                                    <label for="nameinput" class="form-label">First and Last name</label>
-                                    <input type="text" class="form-control p-4" placeholder="e.g. Livingstonia Safari" />
+                                    <label for="nameinput" class="form-label">First name</label>
+                                    <input type="text" class="form-control p-4" placeholder="e.g. Livingstonia " />
+                                     <br> 
+                                    <label for="nameinput" class="form-label">Last name</label>
+                                    <input type="text" class="form-control p-4" placeholder="e.g. safari " />
                                      <br>  
                                     
                                     <label for="Email address" class="form-label">Email address</label>
