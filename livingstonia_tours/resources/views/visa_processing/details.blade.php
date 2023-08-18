@@ -9,6 +9,10 @@
     <!-- Feature Start -->
     <div class="container-fluid pb-5">
         <div class="container pt-1 pb-3">
+            <div class="text-start mb-2 pb-2">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Livingstonia safaris also deal in visa processing in Uganda catering for all types of clients that would require to fly </h6>
+                
+            </div>
             <div class="row">
                 
                 <div class="col-md-4 ">
@@ -18,7 +22,7 @@
                             
                         </div>
                         <div class="d-flex flex-shrink-0 align-items-center justify-content-center ml-5 " style="height: 100px; width: 100px;">
-                            <img src="/img/uganda.png" class="rounded" style="height: 100px; width: 100px; alt="...">
+                            <img src="/img/uganda.png" class="rounded" style="height: 100px; width: 100px object-fit: cover;" alt="...">
                         </div>
                         
                     </div>
@@ -37,7 +41,7 @@
                             <i class="fa fa-2x fa-award text-white"></i>
                         </div>
                         <div class="d-flex flex-column">
-                            <h5 class="mt-4">kenya</h5>
+                            <h5 class="mt-4">{{$country->name}}</h5>
                             
                         </div>
                     </div>
@@ -55,7 +59,7 @@
                     
                     <div class="pl-3">
                         <h6 class="m-1">Tourist Visa is Required
-You need a visa to travel to this country. Please use our website to contact our reservation team to help you to apply for visa. Safe Travels!</h6>
+You need a visa to travel to this {{$country->name}}. Please use our website to contact our reservation team to help you to apply for visa. Safe Travels!</h6>
                         
                     </div>
                 </div>
@@ -65,10 +69,7 @@ You need a visa to travel to this country. Please use our website to contact our
 
             <!-- Booking form Start -->
     
-            <div class="text-start mb-2 pb-2">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Livingstonia safaris also deal in visa processing in Uganda catering for all types of clients that would require to fly </h6>
-                
-            </div>
+            
             <form action="" method="">
                 <div class="row bg-white">
                     

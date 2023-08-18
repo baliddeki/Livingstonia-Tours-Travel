@@ -14,40 +14,20 @@
                 <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Explore Visas</h6>
                 <h4>For many destinations around the world, a visa is required to be able to enter a country. To find out whether you need a visa, simply click on the country you are planning to visit below.</h4>
             </div>
-                <div class="col-md-4">
-                    <div class="d-flex mb-4 mb-lg-0">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center  mr-3" style="height: 100px; width: 100px;">
-                            <img src="/img/uganda.png" class="rounded" style="height: 100px; width: 100px; alt="...">
+                @foreach($countries as $country)
+                    <a class="col-md-4  text-primary" href="{{route('country.visa', ['country' => $country->id])}}">
+                        <div class="d-flex mb-4 mb-lg-0">
+                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center  mr-3" style="height: 100px; width: 100px; ">
+                                <img src="/img/uganda.png" class="rounded" style="height: 100px; width: 100px;object-fit: cover;" alt="...">
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class="text-center mt-4">{{$country->name}}</h5>
+                                
+                            </div>
                         </div>
-                        <div class="d-flex flex-column">
-                            <h5 class="text-center mt-4">uganda</h5>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="d-flex mb-4 mb-lg-0">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
-                            <i class="fa fa-2x fa-award text-white"></i>
-                        </div>
-                        <div class="d-flex flex-column">
-                            <h5 class="mt-4">kenya</h5>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="d-flex mb-4 mb-lg-0">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
-                            <i class="fa fa-2x fa-globe text-white"></i>
-                        </div>
-                        <div class="d-flex flex-column">
-                            <a class="h5 text-decoration-none mt-4" href="">Tanzania</>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    </a>
+                @endforeach
+                
         </div>
     </div>
     <!-- Feature End -->

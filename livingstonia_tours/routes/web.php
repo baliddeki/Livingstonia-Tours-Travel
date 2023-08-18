@@ -28,12 +28,11 @@ Route::get('/', [HomeController::class, 'index'])->name('landing_page.index');
 Route::get('/tour_packages', [TourServiceController::class, 'index'])->name('tour-packages.index');
 Route::resource('services', ServiceController::class);
 Route::resource('/about', AboutController::class);
-Route::resource('/hotel', hotelController::class);
+Route::resource('/hotel', HotelController::class);
 Route::resource('/visaprocessing', VisaProcessingController::class);
-Route::resource('/air_ticketing', hotelController::class);
-Route::get('/visa', function () {
-    return view('visa_processing.details');
-});
+Route::resource('/air_ticketing', HotelController::class);
+Route::get('/visaprocessing/{country}/visa', [VisaProcessingController::class, 'showVisa'])->name('country.visa');
+
 
 
 

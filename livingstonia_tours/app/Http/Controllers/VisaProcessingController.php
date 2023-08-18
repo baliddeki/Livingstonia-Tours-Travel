@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Country;
 use Illuminate\Http\Request;
 
 class VisaProcessingController extends Controller
@@ -11,8 +12,9 @@ class VisaProcessingController extends Controller
      */
     public function index()
     {
-        //
-        return view('visa_processing.index');
+        //Fetch a list of all countries in alphabetical order
+        $countries = Country::orderBy('name')->get();
+        return view('visa_processing.index', compact('countries'));
     }
 
     /**
@@ -61,5 +63,13 @@ class VisaProcessingController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function showVisa(Country $country)
+    {
+        //Fetch information about the country
+        $country = Country::find($country->id);
+
+        return view('visa_processing.details', compact('country'));
     }
 }
