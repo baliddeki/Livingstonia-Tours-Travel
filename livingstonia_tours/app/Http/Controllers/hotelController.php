@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\HotelBooking;
 use Illuminate\Http\Request;
 use App\Models\Hotel;
 use App\Models\Service;
@@ -73,31 +74,32 @@ class HotelController extends Controller
      */
     public function storeHotelBooking(Request $request)
     {
-        $request->validate([
-            'hotel_id' => 'required',
-            'check_in' => 'required',
-            'check_out' => 'required',
+        $validatedData = $request->validate([
+            'hotel_id' => 'required|exists:hotels,hId',
+            'check_in' => 'required|date',
+            'check_out' => 'required|date|after:check_in_date',
             'number_of_people' => 'required',
             'number_of_rooms' => 'required',
-            'fname' => 'required',
-            'lname' => 'required',
-            'email' => 'required',
+            'fname' => 'required|string',
+            'lname' => 'required|string',
+            'email' => 'required|email',
             'phone' => 'required',
         ]);
 
-        $hotel = Hotel::find($request->hotel_id);
+        $hotel = $request->input('hotel_id');
 
-        $hotel->bookings()->create([
-            'check_in' => $request->check_in,
-            'check_out' => $request->check_out,
-            'number_of_people' => $request->number_of_people,
-            'number_of_rooms' => $request->number_of_rooms,
-            'fname' => $request->fname,
-            'lname' => $request->lname,
-            'email' => $request->email,
-            'phone' => $request->phone,
+        $hotel_bookings = new HotelBooking([
+            'hotel_id' => $hotel,
+            'check_in' => $validatedData['check_in'],
+            'check_out' => $validatedData['check_out'],
+            'number_of_people' => $validatedData['number_of_people'],
+            'number_of_rooms' => $validatedData['number_of_rooms'],
+            'fname' => $validatedData['fname'],
+            'lname' => $validatedData['lname'],
+            'email' => $validatedData['email'],
+            'phone' => $validatedData['phone'],
         ]);
-
-        return redirect()->route('hotel.index')->with('success', 'Hotel booking successful');
+        dd($hotel_bookings);
+        //     return redirect()->route('hotel.index')->with('success', 'Hotel booking successful');
     }
 }

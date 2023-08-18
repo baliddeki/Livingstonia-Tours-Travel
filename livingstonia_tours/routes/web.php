@@ -27,15 +27,15 @@ Route::get('/tour_packages', [TourServiceController::class, 'index'])->name('tou
 Route::resource('services', ServiceController::class);
 Route::resource('/about', AboutController::class);
 Route::resource('/hotel', hotelController::class);
-Route::resource('/visa_processing', hotelController::class);
-Route::resource('/air_ticketing', hotelController::class);
+Route::post(
+    '/hotel_booking',
+    [hotelController::class, 'storeHotelBooking']
+)->name('hotelBooking');
 
 
 
 
-Route::get('/hoteldetails', function () {
-    return view('hotel.details');
-});
+
 
 
 Route::middleware(['web'])->group(function () {

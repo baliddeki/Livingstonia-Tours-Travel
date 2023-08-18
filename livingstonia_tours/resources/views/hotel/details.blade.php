@@ -123,10 +123,11 @@
                 <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Book {{$hotel->hName}}</h6>
                 
             </div>
-            <form action="{route(hotel.store)}" method="">
+            <form method="POST" action="hotelBooking" >
                 @csrf
+                
                 <div class="row bg-white">
-                    
+                    <input type="hidden" name="hotel_id" value="{{ $hotel->hId }}" />
                     <div class="col  p-4">
                         
                             <h5>step1: </h5>
@@ -147,19 +148,19 @@
                                 <br>
                                 
                                 <label for="numberofpeople" class="form-label">Number of people</label>
-                                    <input type="number" class="form-control p-4"  placeholder="Number of people"/>
+                                    <input type="number" class="form-control p-4" min="1" max="10" placeholder="Number of people" name="Number_of_people"/>
                                      <br>   
 
                                 <label for="numberofrooms" class="form-label">Number of rooms</label>
-                                    <input type="number" class="form-control p-4" id="subject" placeholder="Number of rooms"/>
+                                    <input type="number" class="form-control p-4" id="subject" min="1" max="10" placeholder="Number of rooms" name="Number_of_room"/>
                                     <br>
 
                                 <label for="checkin" class="form-label">Check in</label>
-                                    <input type="date" class="form-control p-4" id="subject" placeholder="Check in"/>
+                                    <input type="date" class="form-control p-4" id="subject" name="Check_in"/>
                                     <br>
 
                                 <label for="checkout" class="form-label">Check out</label>
-                                    <input type="date" class="form-control p-4" id="subject" placeholder="Check out"/>
+                                    <input type="date" class="form-control p-4" id="subject" name="Check_out"/>
                                     <br>
                                     
 
@@ -175,18 +176,18 @@
                                 
                                 <div class="control-group">
                                     <label for="nameinput" class="form-label">First name</label>
-                                    <input type="text" class="form-control p-4" placeholder="e.g. Livingstonia " />
+                                    <input type="text" class="form-control p-4" placeholder="e.g. Livingstonia " name="fname" />
                                      <br> 
                                     <label for="nameinput" class="form-label">Last name</label>
-                                    <input type="text" class="form-control p-4" placeholder="e.g. safari " />
+                                    <input type="text" class="form-control p-4" placeholder="e.g. safari "name="lname" />
                                      <br>  
                                     
                                     <label for="Email address" class="form-label">Email address</label>
-                                    <input type="email" class="form-control p-4"  placeholder="email@email.com"/>
+                                    <input type="email" class="form-control p-4"  placeholder="email@email.com" name="email"/>
                                      <br>   
 
                                     <label for="phone number" class="form-label">phone number</label>
-                                    <input type="text" class="form-control p-4"  placeholder="+256 700 000 000"/>
+                                    <input type="text" class="form-control p-4"  placeholder="+256 700 000 000" name="phone"/>
                                       <br>  
                                 </div>
                             </div>                  
@@ -195,8 +196,9 @@
 
                 </div>
                 <div class="row bg-white ">
-                    <div class="col">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="col p-2">
+                        
+                        <button type="submit" class="btn btn-primary p-2" name ="submit">Submit</button>
                     </div>
                 </div>
 
