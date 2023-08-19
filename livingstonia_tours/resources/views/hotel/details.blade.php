@@ -123,7 +123,7 @@
                 <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Book {{$hotel->hName}}</h6>
                 
             </div>
-            <form method="POST" action="hotelBooking" >
+            <form method="POST" action="{{route('hotelBooking',['hotelId' => $hotel->hId])}}" >
                 @csrf
                 
                 <div class="row bg-white">

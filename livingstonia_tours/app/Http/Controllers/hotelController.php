@@ -72,12 +72,12 @@ class HotelController extends Controller
      * store hotel boking details
      
      */
-    public function storeHotelBooking(Request $request)
+    public function storeHotelBooking(Request $request, string $hotelId)
     {
         $validatedData = $request->validate([
-            'hotel_id' => 'required|exists:hotels,hId',
+            'hId' => 'required|exists:hotels,hId',
             'check_in' => 'required|date',
-            'check_out' => 'required|date|after:check_in_date',
+            'check_out' => 'required|date|after:check_in',
             'number_of_people' => 'required',
             'number_of_rooms' => 'required',
             'fname' => 'required|string',
@@ -86,9 +86,9 @@ class HotelController extends Controller
             'phone' => 'required',
         ]);
 
-        $hotel = $request->input('hotel_id');
+        $hotel = Hotel::find($hotelId);;
 
-        $hotel_bookings = new HotelBooking([
+        $hotel_booking = new HotelBooking([
             'hotel_id' => $hotel,
             'check_in' => $validatedData['check_in'],
             'check_out' => $validatedData['check_out'],
@@ -98,8 +98,9 @@ class HotelController extends Controller
             'lname' => $validatedData['lname'],
             'email' => $validatedData['email'],
             'phone' => $validatedData['phone'],
+
         ]);
-        dd($hotel_bookings);
+        dd($hotel_booking);
         //     return redirect()->route('hotel.index')->with('success', 'Hotel booking successful');
     }
 }

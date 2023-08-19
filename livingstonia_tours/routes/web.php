@@ -28,7 +28,7 @@ Route::resource('services', ServiceController::class);
 Route::resource('/about', AboutController::class);
 Route::resource('/hotel', hotelController::class);
 Route::post(
-    '/hotel_booking',
+    '/hotel/{hotelId}/hotelBooking',
     [hotelController::class, 'storeHotelBooking']
 )->name('hotelBooking');
 
@@ -36,7 +36,8 @@ Route::post(
 
 
 
-
+// href = "{{route('country.visa', ['country' => $country->id])}}
+// Route::get('/visaprocessing/{country}/visa', [VisaProcessingController::class, 'showVisa'])->name('country.visa');
 
 Route::middleware(['web'])->group(function () {
     //My routes here
