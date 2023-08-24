@@ -28,7 +28,7 @@ Route::resource('services', ServiceController::class);
 Route::resource('/about', AboutController::class);
 Route::resource('/hotel', hotelController::class);
 Route::post(
-    '/hotel/{hotelId}/hotelBooking',
+    '/hotel/{hotel}/hotelBooking',
     [hotelController::class, 'storeHotelBooking']
 )->name('hotelBooking');
 

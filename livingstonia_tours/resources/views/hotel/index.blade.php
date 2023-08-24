@@ -10,6 +10,11 @@
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
             <div class="text-center mb-3 pb-3">
+                @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>                    
+                @endif
                 <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Hotels</h6>
                 <h1>Hotels loved by guests</h1>
             </div>
