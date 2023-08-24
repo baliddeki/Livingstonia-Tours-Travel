@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\HotelBooking;
 use Illuminate\Http\Request;
 use App\Models\Hotel;
 use App\Models\Service;
@@ -65,5 +66,43 @@ class HotelController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    /**
+     * store hotel boking details
+     
+     */
+    public function storeHotelBooking(Request $request, $hId)
+    {
+
+        $validatedData = $request->validate([
+            'hotel_id' => 'required|exists:hotels,hId',
+            'Check_in' => 'required|date',
+            'Check_out' => 'required|date|after:Check_in',
+            'Number_of_people' => 'required',
+            'Number_of_rooms' => 'required',
+            'fname' => 'required|string',
+            'lname' => 'required|string',
+            'email' => 'required|email',
+            'phone' => 'required',
+        ]);
+
+        $hotel = Hotel::find($hId);
+
+        $hotel_booking = new HotelBooking([
+            'hotel_id' => $hotel->hId,
+            'check_in' => $validatedData['Check_in'],
+            'check_out' => $validatedData['Check_out'],
+            'number_of_people' => $validatedData['Number_of_people'],
+            'number_of_rooms' => $validatedData['Number_of_rooms'],
+            'fname' => $validatedData['fname'],
+            'lname' => $validatedData['lname'],
+            'email' => $validatedData['email'],
+            'phone' => $validatedData['phone'],
+        ]);
+
+        $hotel_booking->save();
+
+        return redirect()->route('hotel.index')->with('success',  $hotel->hName . ' booking has been successful thankyou!!');
     }
 }

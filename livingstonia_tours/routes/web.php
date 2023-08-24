@@ -6,7 +6,7 @@ use App\Http\Controllers\TourServiceController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\HotelController;
+use App\Http\Controllers\hotelController;
 use App\Http\Controllers\CarHireController;
 use App\Http\Controllers\CarBookingController;
 
@@ -26,17 +26,18 @@ Route::get('/', [HomeController::class, 'index'])->name('landing_page.index');
 Route::get('/tour_packages', [TourServiceController::class, 'index'])->name('tour-packages.index');
 Route::resource('services', ServiceController::class);
 Route::resource('/about', AboutController::class);
-Route::resource('/hotel', HotelController::class);
-Route::resource('/visa_processing', hotelController::class);
-Route::resource('/air_ticketing', hotelController::class);
+Route::resource('/hotel', hotelController::class);
+Route::post(
+    '/hotel/{hotel}/hotelBooking',
+    [hotelController::class, 'storeHotelBooking']
+)->name('hotelBooking');
 
 
 
 
-Route::get('/hoteldetails', function () {
-    return view('hotel.details');
-});
 
+// href = "{{route('country.visa', ['country' => $country->id])}}
+// Route::get('/visaprocessing/{country}/visa', [VisaProcessingController::class, 'showVisa'])->name('country.visa');
 
 Route::middleware(['web'])->group(function () {
     //My routes here

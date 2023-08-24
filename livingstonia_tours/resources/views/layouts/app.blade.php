@@ -98,7 +98,7 @@
                 </nav>
             </div>
         </div>
-        <!-- Navbar End -->
+>`        <!-- Navbar End -->
 
 
         <!-- Header Start -->
@@ -270,5 +270,27 @@
 
 <!-- Template Javascript -->
 <script src="js/main.js"></script>
+
+<!-- Time out for a div sucess message-->
+<script>
+    // Wait for the DOM to load
+    document.addEventListener("DOMContentLoaded", function() {
+        // Find the success message element
+        var successMessage = document.querySelector(".alert-success");
+
+        // Check if the success message element exists
+        if (successMessage) {
+            // Set a timeout to hide or remove the element after 5 seconds
+            setTimeout(function() {
+                // Hide the element by adding the 'd-none' class
+                successMessage.classList.add("d-none");
+
+                // OR
+                // Remove the element from the DOM
+                // successMessage.parentNode.removeChild(successMessage);
+            }, 5000); // 5000 milliseconds = 5 seconds
+        }
+    });
+</script>
 
 </html>
